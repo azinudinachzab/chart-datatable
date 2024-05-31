@@ -1,0 +1,88 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+</head>
+<body>
+    <div style="margin:auto">
+    <table id="myTable" class="cell-border compact stripe">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>Manager</td>
+                <td>London</td>
+            </tr>
+            <tr>
+                <th>Alice</th>
+                <th>Manager</th>
+                <th>London</th>
+            </tr>
+            <tr>
+                <th>Alice</th>
+                <th>Manager</th>
+                <th>London</th>
+            </tr>
+            <tr>
+                <th>Alice</th>
+                <th>Manager</th>
+                <th>London</th>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>Manager</td>
+                <td>London</td>
+            </tr>
+            <tr>
+                <th>Alice</th>
+                <th>Manager</th>
+                <th>London</th>
+            </tr>
+            <tr>
+                <th>Alice</th>
+                <th>Manager</th>
+                <th>London</th>
+            </tr>
+            <tr>
+                <th>Alice</th>
+                <th>Manager</th>
+                <th>London</th>
+            </tr>
+            <tr>
+                <th>Alice</th>
+                <th>Manager</th>
+                <th>London</th>
+            </tr>
+            <tr>
+                <th>Alice</th>
+                <th>Manager</th>
+                <th>London</th>
+            </tr>
+            <tr>
+                <th>Ditto</th>
+                <th>CEO</th>
+                <th>Indonesia</th>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable({
+                searching: false,
+                paging: false,
+                ordering: false,
+                responsive: true,
+            })
+        })
+    </script>
+</body>
+</html>

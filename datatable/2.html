@@ -1,0 +1,74 @@
+<html>
+<head>
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="margin:auto">
+    <button id="addRow">add row</button>
+    <table id="myTable">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+        </tr>
+        </thead>
+<!--        <tbody>-->
+<!--        <tr>-->
+<!--            <th>Alice</th>-->
+<!--            <th>Manager</th>-->
+<!--            <th>London</th>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var tbl = $('#myTable').DataTable({
+            data: [
+                {
+                    "Name": "udin",
+                    "Position": "manager",
+                    "Office": "bogor"
+                },
+                {
+                    "Name": "Ditto",
+                    "Position": "CEO",
+                    "Office": "kalimantan"
+                },
+                {
+                    "Name": "afgan",
+                    "Position": "singer",
+                    "Office": "jakarta"
+                },
+                {
+                    "Name": "oki rengga",
+                    "Position": "comedian",
+                    "Office": "medan"
+                }
+            ],
+            columns: [
+                {data: "Name"},
+                {data: "Position"},
+                {data: "Office"}
+            ],
+            paging: true,
+            searching: true,
+            ordering: true
+        })
+
+        $('#addRow').on('click', function(){
+            tbl.row.add({
+                "Name": "Ditto",
+                "Position": "CEO",
+                "Office": "Kalimantan"
+            }).draw()
+        })
+    })
+</script>
+</body>
+</html>
